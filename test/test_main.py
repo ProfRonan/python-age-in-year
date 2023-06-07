@@ -18,7 +18,7 @@ class TestMain(unittest.TestCase):
         sys.modules.pop("main", None)
 
     @patch("builtins.input", side_effect=["2010", "15", "2023", "Fulano"])
-    def test_idade_2010_15_2023_Fulano(self, _mock_input):
+    def test_idade_2010_15_2023_fulano(self, _mock_input):
         """
         Testa se o programa imprime "Fulano, no ano de 2023 você terá 28 anos"
         quando o usuário digita 2010, 15, 2023, Fulano
@@ -33,7 +33,7 @@ class TestMain(unittest.TestCase):
         )
 
     @patch("builtins.input", side_effect=["0", "0", "0", "Beltrano"])
-    def test_idade_0_0_0_Beltrano(self, _mock_input):
+    def test_idade_0_0_0_beltrano(self, _mock_input):
         """
         Testa se o programa imprime "Beltrano, no ano de 0 você terá 0 anos"
         quando o usuário digita 0, 0, 0, Beltrano
@@ -47,7 +47,7 @@ class TestMain(unittest.TestCase):
         )
 
     @patch("builtins.input", side_effect=["2000", "10", "1990", "Ciclano"])
-    def test_idade_2000_10_1990_Ciclano(self, _mock_input):
+    def test_idade_2000_10_1990_ciclano(self, _mock_input):
         """
         Testa se o programa imprime "Ciclano, no ano de 1990 você terá 0 anos"
         quando o usuário digita 2000, 10, 1990, Ciclano
@@ -62,7 +62,7 @@ class TestMain(unittest.TestCase):
         )
 
     @patch("builtins.input", side_effect=["2001", "0", "2010", "Alice"])
-    def test_idade_2001_0_2010_Alice(self, _mock_input):
+    def test_idade_2001_0_2010_alice(self, _mock_input):
         """
         Testa se o programa imprime "Alice, no ano de 2010 você terá 9 anos"
         quando o usuário digita 2001, 0, 2010, Alice
