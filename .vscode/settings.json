@@ -1,8 +1,18 @@
 {
-  "python.testing.unittestEnabled": true,
-  "pylint.args": [
-    "--disable",
-    "non-ascii-name",
-    "non-ascii-module-import"
-  ]
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "editor.formatOnSave": true,
+  "isort.args": [
+    "--profile",
+    "black"
+  ],
+  "python.formatting.provider": "none",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.testing.unittestEnabled": true
 }
